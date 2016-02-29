@@ -29,45 +29,42 @@ It is a very basic demo app to shows how to draw signatures
 
 	The following code should appear in your html file header:
 	
-	HTML
-
-		<link href="jquery.signaturepad.css" rel="stylesheet">
-		<!--[if lt IE 9]><script src="../assets/flashcanvas.js"></script><![endif]-->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-		<script src="jquery.signaturepad.js"></script>
-		<script src="json2.min.js"></script>
-		<script>
-		  $(document).ready(function() {
-		    $('.sigPad').signaturePad({drawOnly:true});
-		    $('#submit').click(function () {
-		      if($('input.output').val()){
-		        alert($('input.output').val());
-		      }
-		      else{
-		        alert('Please sign the document')
-		      }
-		    })
-		  });
-		</script>
-		
+	```HTML
+	<link href="jquery.signaturepad.css" rel="stylesheet">
+	<!--[if lt IE 9]><script src="../assets/flashcanvas.js"></script><![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="jquery.signaturepad.js"></script>
+	<script src="json2.min.js"></script>
+	<script>
+	  $(document).ready(function() {
+	    $('.sigPad').signaturePad({drawOnly:true});
+	    $('#submit').click(function () {
+	      if($('input.output').val()){
+	        alert($('input.output').val());
+	      } else{
+	        alert('Please sign the document')
+	      }
+		})
+	  });
+	</script>
+	```
 4. Add a form
 
 	This block of code should be added to your html body:
 
-	HTML
-	
-		<form method="post" action="" class="sigPad">
-		  <ul class="sigNav">
-		    <li class="clearButton"><a href="#clear">Clear</a></li>
-		  </ul>
-		  <div class="sig sigWrapper">
-		    <div class="typed"></div>
-		    <canvas class="pad" width="198" height="55"></canvas>
-		    <input type="hidden" name="output" class="output">
-		  </div>
-		  <button type="submit" id="submit">Submit.</button>
-		</form>
-
+	```HTML
+	<form method="post" action="" class="sigPad">
+	  <ul class="sigNav">
+        <li class="clearButton"><a href="#clear">Clear</a></li>
+	  </ul>
+	  <div class="sig sigWrapper">
+	    <div class="typed"></div>
+	    <canvas class="pad" width="198" height="55"></canvas>
+	    <input type="hidden" name="output" class="output">
+	  </div>
+	  <button type="submit" id="submit">Submit.</button>
+	</form>
+    ```
 ## How to use it with Eligible - Enrollments
 
 Please refer to complete documentation on Signature Pad here https://docs.eligible.com/docs/signatures#capturing-electronic-signatures
