@@ -29,27 +29,25 @@ It is a very basic demo app to shows how to draw signatures
 
 	The following code should appear in your html file header:
 	
-	HTML
-
-		<link href="jquery.signaturepad.css" rel="stylesheet">
-		<!--[if lt IE 9]><script src="../assets/flashcanvas.js"></script><![endif]-->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-		<script src="jquery.signaturepad.js"></script>
-		<script src="json2.min.js"></script>
-		<script>
-		  $(document).ready(function() {
-		    $('.sigPad').signaturePad({drawOnly:true});
-		    $('#submit').click(function () {
-		      if($('input.output').val()){
-		        alert($('input.output').val());
-		      }
-		      else{
-		        alert('Please sign the document')
-		      }
-		    })
-		  });
-		</script>
-		
+	```HTML
+	<link href="jquery.signaturepad.css" rel="stylesheet">
+	<!--[if lt IE 9]><script src="../assets/flashcanvas.js"></script><![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="jquery.signaturepad.js"></script>
+	<script src="json2.min.js"></script>
+	<script>
+	  $(document).ready(function() {
+	    $('.sigPad').signaturePad({drawOnly:true});
+	    $('#submit').click(function () {
+	      if($('input.output').val()){
+	        alert($('input.output').val());
+	      } else{
+	        alert('Please sign the document')
+	      }
+		})
+	  });
+	</script>
+	```
 4. Add a form
 
 	This block of code should be added to your html body:
